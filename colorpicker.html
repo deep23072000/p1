@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div5{
+            width: 400px;
+            height: 300px;
+            background-color: white;
+            border: 2px solid purple;
+            border-radius: 10px;
+            margin: 40px;
+        }
+        #div0,#div1,#div2,#div3,#div4{
+            width: 100px;
+            height: 80px;
+            border: 2px solid purple;
+            border-radius: 5px;
+            margin: 20px;
+        }
+
+        #selectedcolor{
+            width: 100px;
+            height: 80px;
+            border-radius: 5px;
+            margin: 50px;
+            position: absolute;
+            border: 2px solid purple;
+
+            float: left;
+        }
+        button{
+            margin: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body onload="show()">
+    <div id="selectedcolor"></div>
+    <center>
+        <h1>Choose your color</h1>
+        <div style="display: flex;justify-content: center;">
+        <div onclick="colorpick('pink')" id="div0"></div>
+        <div onclick="colorpick('black')" id="div1"></div>
+        <div onclick="colorpick('red')" id="div2"></div>
+        <div onclick="colorpick('orange')" id="div3"></div>
+        <div onclick="colorpick('green')" id="div4"></div>
+        </div>
+    </center>
+    <center>
+       <div id="div5"></div>
+       <button onclick="final()"> Start </button>
+    </center>
+    <script src="./colorpicker.js"></script>
+</body>
+</html>

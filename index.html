@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #img1{
+            margin-top: 300px;
+            border-radius: 50%;
+        }
+        #mainsection{
+            display: none;
+        }
+        #b{
+            /* background-color: black; */
+        }
+        #showstr::after{
+            content: "_|";
+        }
+    </style>
+    <script>
+        function d(){
+              setTimeout(show,3000);
+              function show(){
+                document.getElementById('img1').style.display = "none";
+                document.getElementById('mainsection').style.display="block";
+                document.getElementById('b').style.backgroundColor = "white";
+                
+                setInterval(run,200)
+                setInterval(runstring,100)
+                let store = 0
+                function run(){
+                    if(store<15){
+                       document.getElementById('out').innerHTML = store;
+                       store++;
+                    }
+                    else{
+                        store =0;
+                    }
+                }
+                let stores = '';
+                let val = "we are developer";
+                let inc = 0;
+                function runstring(){
+                    if(inc < val.length){
+                    stores = stores + val[inc];
+                    document.getElementById('showstr').innerHTML = stores;
+                    inc++;
+                    }
+                    else{
+                        stores = "";
+                        inc =0;
+                    }
+
+                }
+
+              } 
+        }
+     </script>
+</head>
+<body id="b" onload="d()">
+    
+    <!-- =========loader====== -->
+
+<center><img id="img1" width="200px" height="200px" src="https://media.istockphoto.com/id/1359966873/photo/beautiful-view-of-upper-lake-bhopal-madhya-pradesh-india.jpg?s=612x612&w=0&k=20&c=eMvt8Tq6Pih6eMdq9lxA2H88x86PGwbcmaXXah46S88="></center>
+<!-- =================end loader -->
+
+
+
+<section id="mainsection">
+    <!-- =========================main website========= -->
+   
+     <!-- <div id="out"></div> -->
+     <h1  id="showstr"></h1>
+     
+    
+    <!-- ===========end main website======== -->
+
+</section>
+
+ 
+</body>
+</html>

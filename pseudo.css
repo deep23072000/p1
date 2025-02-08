@@ -1,0 +1,32 @@
+.pse{
+    color: green;
+}
+
+.pse:hover{
+    color: black;
+}
+
+.pse::selection{
+    color: yellow;
+    background-color: black;
+}
+
+*::selection{
+    color: yellow;
+    background-color: black;
+}
+
+.in{
+    color: red;
+}
+.in::placeholder{
+    color: red;
+}
+
+/* .fo::after{
+    content: "++++";
+} */
+
+.fo::before{
+    content: "++++";
+}

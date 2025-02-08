@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+            
+            width: 1200px;
+            overflow-x: hidden;
+
+        }
+    </style>
+</head>
+<body onload="slider()">
+    <center>
+        
+    <div id="div1">
+        <div style="display: flex;" id="div2">
+        <img width="1200px" src="https://cdn.shopify.com/s/files/1/0595/7291/2305/files/1_1_31478ff3-36bf-4602-b0af-409615973f08.jpg?v=1629631317&width=1500" alt="">
+        <img width="1200px" src="https://cdn.shopify.com/s/files/1/0595/7291/2305/files/2_1.jpg?v=1629631337&width=1500" alt="">
+        <img width="1200px" src="https://cdn.shopify.com/s/files/1/0595/7291/2305/files/3_1_4c399f8d-c825-4537-abd5-ea14a6721905.jpg?v=1629631356&width=1500" alt="">
+        </div>
+    </div>
+    </center>
+
+    <script>
+        function slider(){
+            setInterval(show,5000)
+            let store = 0;
+            function show(){
+                if(store === 0){
+                    document.getElementById('div2').style.marginLeft = "0px";
+                    document.getElementById('div2').style.transition = "margin-left 2s";
+                    store++
+                }
+                else if(store === 1){
+                    document.getElementById('div2').style.marginLeft = "-1200px"; 
+                    document.getElementById('div2').style.transition = "margin-left 2s";
+                    store++
+                }
+                else if(store === 2){
+                    document.getElementById('div2').style.marginLeft = "-2400px";
+                    document.getElementById('div2').style.transition = "margin-left 2s";
+                    store++
+                }
+                else if(store === 3){
+                    document.getElementById('div2').style.marginLeft = "-1200px";
+                    document.getElementById('div2').style.transition = "margin-left 2s";
+                    store++
+                }
+                else if(store === 4){
+                    document.getElementById('div2').style.marginLeft = "0px";
+                    document.getElementById('div2').style.transition = "margin-left 2s";
+                    store=0
+                }
+
+            }
+        }
+
+        
+    </script>
+</body>
+</html>
